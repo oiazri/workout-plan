@@ -7,25 +7,42 @@ export function App() {
   );
 }
 
+const characters = [
+  {
+    id: 1,
+    fullname: "Son Goku",
+    imageUrl: "https://i.pinimg.com/736x/9c/c5/b9/9cc5b9440b46dbda663a2487c84d0f0d.jpg",
+    description: "Saiyan who saves earth",
+  },
+  {
+    id: 2,
+    fullname: "Vegeta",
+    imageUrl: "https://i.pinimg.com/736x/86/c9/74/86c974bef067586b93b1ad3fa5a638bf.jpg",
+    description: "Prince of all saiyan",
+  },
+  {
+    id: 3,
+    fullname: "Saitama",
+    imageUrl: "https://i.pinimg.com/736x/33/aa/d8/33aad8ac8fc010cd94b0253963505af5.jpg",
+    description: "Break his limiter",
+  },
+  {
+    id: 4,
+    fullname: "Baki Hanma",
+    imageUrl: "https://i.pinimg.com/736x/1e/df/fd/1edffd083a98fb70bbde6a2109d539b0.jpg",
+    description: "Want to surpass his father",
+  },
+];
+
 export function Gallery() {
   return (
     <section>
       <h1>Anime Workout Motivation</h1>
-      <Profile
-        fullname="Son Goku"
-        imageUrl="https://i.pinimg.com/736x/9c/c5/b9/9cc5b9440b46dbda663a2487c84d0f0d.jpg"
-        description="Saiyan who saves earth"
-      />
-      <Profile
-        fullname="Saitama"
-        imageUrl="https://i.pinimg.com/736x/33/aa/d8/33aad8ac8fc010cd94b0253963505af5.jpg"
-        description="Break his limiter"
-      />
-      <Profile
-        fullname="Baki"
-        imageUrl="https://i.pinimg.com/736x/1e/df/fd/1edffd083a98fb70bbde6a2109d539b0.jpg"
-        description="Want to surpass his father"
-      />
+      {characters.map((character) => (
+        <li key={character.id}>
+          <Profile fullname={character.fullname} imageUrl={character.imageUrl} description={character.description} />
+        </li>
+      ))}
     </section>
   );
 }
@@ -40,10 +57,10 @@ export function Profile({
   description: string;
 }) {
   return (
-    <div>
+    <section>
       <h3>{fullname}</h3>
       <img src={imageUrl} alt={fullname} height={150} width={100} />
       <p>{description}</p>
-    </div>
+    </section>
   );
 }
