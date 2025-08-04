@@ -11,15 +11,14 @@ export function Gallery() {
   return (
     <section>
       <h1>Anime Workout Motivation</h1>
-      <Profile />
+      <Profile fullname="Son Goku" />
       <ProfileOne />
       <ProfileTwo />
     </section>
   );
 }
 
-export function Profile() {
-  const fullname = "Son Goku";
+export function Profile({ fullname }: { fullname: string }) {
   return (
     <div>
       <h3>{fullname}</h3>
