@@ -44,18 +44,11 @@ export function Profile({
   image: string;
   isHuman: boolean;
 }) {
-  if (!isHuman) {
-    return (
-      <div>
-        <h3>{fullname} is NOT HUMAN</h3>
-        <img src={image} alt={fullname} height={150} width={100} />
-      </div>
-    );
-  }
-
   return (
-    <div>
-      <h3>{fullname} is HUMAN</h3>
+    <div className="bg-orange-100">
+      <h3>
+        {fullname} is {isHuman ? "HUMAN" : "NOT HUMAN"}
+      </h3>
       <img src={image} alt={fullname} height={150} width={100} />
     </div>
   );
