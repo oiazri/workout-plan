@@ -93,6 +93,11 @@ export function Profile({ character }: { character: Character }) {
 
       <div>
         <p>{character.description}</p>
+        <ul>
+          {character.exercises.map((exercise) => (
+            <li key={exercise}>{exercise}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
