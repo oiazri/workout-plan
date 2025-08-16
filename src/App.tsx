@@ -67,7 +67,8 @@ export function Gallery() {
   return (
     <section>
       <h1>Anime Workout Motivation</h1>
-      <ul className="space-y-4">
+
+      <ul className="grid grid-cols-3 gap-4">
         {characters.map((character) => (
           <li key={character.id}>
             <Profile character={character} />
@@ -80,10 +81,10 @@ export function Gallery() {
 
 export function Profile({ character }: { character: Character }) {
   return (
-    <div className="flex gap-4 p-4 bg-green-200 text-green-900">
+    <div className="min-h-56 rounded flex gap-4 p-4 bg-orange-200 text-orange-900">
       <div>
-        <h3 className="text-lg font-bold">{character.fullname}</h3>
         <img
+          className="rounded"
           src={character.imageUrl}
           alt={character.fullname}
           height={150}
@@ -92,8 +93,9 @@ export function Profile({ character }: { character: Character }) {
       </div>
 
       <div>
+        <h3 className="text-lg font-bold">{character.fullname}</h3>
         <p>{character.description}</p>
-        <ul>
+        <ul className="list-disc list-inside">
           {character.exercises.map((exercise) => (
             <li key={exercise}>{exercise}</li>
           ))}
