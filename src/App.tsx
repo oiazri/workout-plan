@@ -7,7 +7,15 @@ export function App() {
   );
 }
 
-const characters = [
+type Character = {
+  id: number;
+  fullname: string;
+  imageUrl: string;
+  description: string;
+  exercises: string[];
+};
+
+const characters: Character[] = [
   {
     id: 1,
     fullname: "Son Goku",
@@ -62,11 +70,7 @@ export function Gallery() {
       <ul className="space-y-4">
         {characters.map((character) => (
           <li key={character.id}>
-            <Profile
-              fullname={character.fullname}
-              imageUrl={character.imageUrl}
-              description={character.description}
-            />
+            <Profile character={character} />
           </li>
         ))}
       </ul>
@@ -74,24 +78,21 @@ export function Gallery() {
   );
 }
 
-export function Profile({
-  fullname,
-  imageUrl,
-  description,
-}: {
-  fullname: string;
-  imageUrl: string;
-  description: string;
-}) {
+export function Profile({ character }: { character: Character }) {
   return (
     <div className="flex gap-4 p-4 bg-green-200 text-green-900">
       <div>
-        <h3 className="text-lg font-bold">{fullname}</h3>
-        <img src={imageUrl} alt={fullname} height={150} width={100} />
+        <h3 className="text-lg font-bold">{character.fullname}</h3>
+        <img
+          src={character.imageUrl}
+          alt={character.fullname}
+          height={150}
+          width={100}
+        />
       </div>
 
       <div>
-        <p>{description}</p>
+        <p>{character.description}</p>
       </div>
     </div>
   );
