@@ -1,6 +1,6 @@
 export function App() {
   return (
-    <div>
+    <div className="m-10">
       <h1>Workout Plan</h1>
       <Gallery />
     </div>
@@ -49,15 +49,17 @@ export function Gallery() {
   return (
     <section>
       <h1>Anime Workout Motivation</h1>
-      {characters.map((character) => (
-        <li key={character.id}>
-          <Profile
-            fullname={character.fullname}
-            imageUrl={character.imageUrl}
-            description={character.description}
-          />
-        </li>
-      ))}
+      <ul className="space-y-4">
+        {characters.map((character) => (
+          <li key={character.id}>
+            <Profile
+              fullname={character.fullname}
+              imageUrl={character.imageUrl}
+              description={character.description}
+            />
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
@@ -72,10 +74,15 @@ export function Profile({
   description: string;
 }) {
   return (
-    <div className="bg-green-200 text-green-900">
-      <h3 className="text-lg font-bold">{fullname}</h3>
-      <img src={imageUrl} alt={fullname} height={150} width={100} />
-      <p>{description}</p>
+    <div className="flex gap-4 p-4 bg-green-200 text-green-900">
+      <div>
+        <h3 className="text-lg font-bold">{fullname}</h3>
+        <img src={imageUrl} alt={fullname} height={150} width={100} />
+      </div>
+
+      <div>
+        <p>{description}</p>
+      </div>
     </div>
   );
 }
