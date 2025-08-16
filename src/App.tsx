@@ -14,6 +14,7 @@ const characters = [
     imageUrl:
       "https://i.pinimg.com/736x/9c/c5/b9/9cc5b9440b46dbda663a2487c84d0f0d.jpg",
     description: "Saiyan who saves earth",
+    exercises: ["Deadlift", "Squat", "Bench press"],
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const characters = [
     imageUrl:
       "https://i.pinimg.com/736x/86/c9/74/86c974bef067586b93b1ad3fa5a638bf.jpg",
     description: "Prince of all saiyan",
+    exercises: ["Bench press", "Pull up", "Cable", "Pull down"],
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const characters = [
     imageUrl:
       "https://i.pinimg.com/736x/33/aa/d8/33aad8ac8fc010cd94b0253963505af5.jpg",
     description: "Break his limiter",
+    exercises: ["100 push-ups", "100 sit-ups", "100 squats", "10km run"],
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ const characters = [
     imageUrl:
       "https://i.pinimg.com/736x/1e/df/fd/1edffd083a98fb70bbde6a2109d539b0.jpg",
     description: "Want to surpass his father",
+    exercises: ["Shadow punch", "Jumping jack", "Push up"],
   },
   {
     id: 5,
@@ -42,6 +46,12 @@ const characters = [
     imageUrl:
       "https://i.pinimg.com/736x/04/07/ec/0407ec63d788a16c2f6357138a893021.jpg",
     description: "Want to destroy all demons",
+    exercises: [
+      "Train breathing techniques",
+      "Dorong batu",
+      "Meditasi di air terjun",
+      "Latihan insting",
+    ],
   },
 ];
 
