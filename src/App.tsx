@@ -73,7 +73,7 @@ const characters: Character[] = [
 export function Gallery() {
   return (
     <section>
-      <h1>Anime Workout Motivation</h1>
+      <h1>Anime Character Workout Motivation</h1>
 
       <ul className="grid grid-cols-3 gap-4">
         {characters.map((character) => (
