@@ -1,7 +1,7 @@
 export function App() {
   return (
-    <div className="m-10">
-      <h1>Workout Plan</h1>
+    <div className="bg-black">
+      <h1 className="font-bold text-yellow-300">Workout Plan</h1>
       <Gallery />
     </div>
   );
@@ -68,12 +68,21 @@ const characters: Character[] = [
       "Control your breath, control your spirit. Strength flows from calm focus.",
     exercises: ["Pulls-up", "Push-up", "Weighted Lunges", " Box Breathing"],
   },
+  {
+    id: 6,
+    fullname: "Roronoa Zorro",
+    imageUrl:
+      "https://i.pinimg.com/1200x/66/10/64/661064a450e86c919f3bd7bb5f64545a.jpg",
+    description:
+      "Scars are proof you kept fighting. Train with discipline, cut down your weakness, and become stronger than yesterday.",
+    exercises: ["Dumbbell shoulder", "Plank", "Push-up", "Sprint"],
+  },
 ];
 
 export function Gallery() {
   return (
     <section>
-      <h1>Anime Character Workout Motivation</h1>
+      <h1 className="text-yellow-300">Anime Character Workout Motivation</h1>
 
       <ul className="grid grid-cols-3 gap-4">
         {characters.map((character) => (
@@ -88,7 +97,7 @@ export function Gallery() {
 
 export function Profile({ character }: { character: Character }) {
   return (
-    <div className="min-h-56 rounded flex gap-4 p-4 bg-yellow-300 text-black">
+    <div className="m-3 min-h-56 rounded flex gap-4 p-4 bg-yellow-300 text-black">
       <div>
         <img
           className="rounded"
