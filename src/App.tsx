@@ -46,7 +46,7 @@ export function Profile({
 }) {
   if (!isHuman) {
     return (
-      <div>
+      <div className="bg-orange-200">
         <h3>{fullname} is NOT HUMAN</h3>
         <img src={image} alt={fullname} height={150} width={100} />
       </div>
