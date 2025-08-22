@@ -110,7 +110,7 @@ export function Profile({ character }: { character: Character }) {
 
       <div>
         <h3 className="text-lg font-bold">{character.fullname}</h3>
-        <p>{character.description}</p>
+        <p className="italic">{character.description}</p>
         <ul className="list-disc list-inside">
           {character.exercises.map((exercise) => (
             <li key={exercise}>{exercise}</li>
