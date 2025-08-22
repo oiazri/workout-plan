@@ -9,12 +9,12 @@ export function App() {
         <h2 className="text-xl">Anime Character Workout Motivation</h2>
       </header>
 
-      <Gallery />
+      <CharacterGrid />
     </div>
   );
 }
 
-export function Gallery() {
+export function CharacterGrid() {
   return (
     <section>
       <ul className="grid grid-cols-3 gap-4">
