@@ -2,7 +2,7 @@ import { characters, type Character } from "./modules/character/data";
 
 export function App() {
   return (
-    <div>
+    <div className="p-4">
       <header className="text-yellow-300 flex flex-col items-center p-4">
         <img src="/brand/workout-plan.svg" alt="Workout Plan" />
         <h1 className="font-bold text-2xl">Workout Plan</h1>
@@ -30,7 +30,7 @@ export function CharacterGrid() {
 
 export function CharacterCard({ character }: { character: Character }) {
   return (
-    <div className="m-3 min-h-56 rounded flex gap-4 p-4 bg-yellow-300 text-black">
+    <div className="min-h-56 rounded flex gap-4 p-4 bg-yellow-300 text-black">
       <div>
         <img
           className="rounded"
