@@ -20,7 +20,7 @@ export function Gallery() {
       <ul className="grid grid-cols-3 gap-4">
         {characters.map((character) => (
           <li key={character.id}>
-            <Profile character={character} />
+            <CharacterCard character={character} />
           </li>
         ))}
       </ul>
@@ -28,7 +28,7 @@ export function Gallery() {
   );
 }
 
-export function Profile({ character }: { character: Character }) {
+export function CharacterCard({ character }: { character: Character }) {
   return (
     <div className="m-3 min-h-56 rounded flex gap-4 p-4 bg-yellow-300 text-black">
       <div>
