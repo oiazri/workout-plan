@@ -1,7 +1,12 @@
 export function App() {
   return (
     <div>
-      <h1 className="font-bold text-yellow-300">Workout Plan</h1>
+      <header className="text-yellow-300 flex flex-col items-center p-4">
+        <img src="/brand/workout-plan.svg" alt="Workout Plan" />
+        <h1 className="font-bold text-2xl">Workout Plan</h1>
+        <h2 className="text-xl">Anime Character Workout Motivation</h2>
+      </header>
+
       <Gallery />
     </div>
   );
@@ -82,8 +87,6 @@ const characters: Character[] = [
 export function Gallery() {
   return (
     <section>
-      <h1 className="text-yellow-300">Anime Character Workout Motivation</h1>
-
       <ul className="grid grid-cols-3 gap-4">
         {characters.map((character) => (
           <li key={character.id}>
