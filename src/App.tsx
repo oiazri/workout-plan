@@ -17,7 +17,7 @@ export function App() {
 export function CharacterGrid() {
   return (
     <section>
-      <ul className="grid grid-cols-3 gap-4">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {characters.map((character) => (
           <li key={character.id}>
             <CharacterCard character={character} />
@@ -43,12 +43,14 @@ export function CharacterCard({ character }: { character: Character }) {
 
       <div className="col-span-2">
         <h3 className="text-lg font-bold">{character.fullname}</h3>
-        <p className="italic">{character.description}</p>
-        <ul className="list-disc list-inside">
-          {character.exercises.map((exercise) => (
-            <li key={exercise}>{exercise}</li>
-          ))}
-        </ul>
+        <div className="text-sm">
+          <p className="italic">{character.description}</p>
+          <ul className="list-disc list-inside">
+            {character.exercises.map((exercise) => (
+              <li key={exercise}>{exercise}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
