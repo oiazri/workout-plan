@@ -1,6 +1,6 @@
 export function App() {
   return (
-    <div className="bg-black">
+    <div>
       <h1 className="font-bold text-yellow-300">Workout Plan</h1>
       <Gallery />
     </div>
