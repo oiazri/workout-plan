@@ -29,7 +29,7 @@ export function CharacterGrid() {
 
 export function CharacterCard({ character }: { character: Character }) {
   return (
-    <div className="m-3 min-h-56 rounded flex gap-4 p-4 bg-yellow-300 text-black">
+    <div className="min-h-56 rounded grid grid-cols-3 gap-4 p-4 bg-yellow-300 text-black">
       <div>
         <img
           className="rounded"
@@ -40,7 +40,7 @@ export function CharacterCard({ character }: { character: Character }) {
         />
       </div>
 
-      <div>
+      <div className="col-span-2">
         <h3 className="text-lg font-bold">{character.fullname}</h3>
         <p className="italic">{character.description}</p>
         <ul className="list-disc list-inside">
