@@ -16,7 +16,7 @@ export function App() {
 export function CharacterGrid() {
   return (
     <section>
-      <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {characters.map((character: Character) => (
           <li key={character.id}>
             <CharacterCard character={character} />
