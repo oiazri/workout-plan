@@ -1,4 +1,4 @@
-import { characters, type Character } from "./modules/data.ts";
+import { characters, type Character } from "./modules/character/data";
 
 export function App() {
   return (
