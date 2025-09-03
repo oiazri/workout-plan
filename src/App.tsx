@@ -1,3 +1,4 @@
+import { Button } from "./components/ui/button";
 import { characters, type Character } from "./modules/character/data";
 
 export function App() {
@@ -49,6 +50,8 @@ export function CharacterCard({ character }: { character: Character }) {
             <li key={exercise}>{exercise}</li>
           ))}
         </ul>
+
+        <Button />
       </div>
     </div>
   );
