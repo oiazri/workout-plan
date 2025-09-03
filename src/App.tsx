@@ -4,6 +4,7 @@ export function App() {
   return (
     <div className="p-4">
       <header className="text-yellow-300 flex flex-col items-center p-4">
+        <img src="/brand/workout-plan.svg" alt="logo" />
         <h1 className="font-bold text-2xl">Workout Plan</h1>
         <h2 className="text-xl">Anime Character Workout Motivation</h2>
       </header>
