@@ -4,7 +4,7 @@ export function App() {
   return (
     <div className="p-4">
       <header className="text-yellow-300 flex flex-col items-center p-4">
-        <img src="/brand/workout-plan.svg" alt="logo" />
+        <img src="/brand/workout-plan.svg" alt="logo" className="size-20" />
         <h1 className="font-bold text-2xl">Workout Plan</h1>
         <h2 className="text-xl">Anime Character Workout Motivation</h2>
       </header>
@@ -17,7 +17,7 @@ export function App() {
 export function CharacterGrid() {
   return (
     <section>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {characters.map((character: Character) => (
           <li key={character.id}>
             <CharacterCard character={character} />
