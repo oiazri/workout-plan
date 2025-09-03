@@ -51,7 +51,8 @@ export function CharacterCard({ character }: { character: Character }) {
           ))}
         </ul>
 
-        <Button />
+        <Button>Upvote</Button>
+        <Button>Downvote</Button>
       </div>
     </div>
   );
